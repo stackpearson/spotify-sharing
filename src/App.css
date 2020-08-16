@@ -1,5 +1,5 @@
 html {
-  background-color: #282c3465;
+  background-color: #282c34bd;
 }
 
 .login-link {
@@ -27,4 +27,22 @@ html {
 .login-page img {
   max-width: 830px;
   margin: 25px;
+}
+
+.playlist-header {
+  max-width: 300px;
+  display: inline;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  color: white;
+}
+
+.playlist-header:hover {
+  color: black;
+}
+
+.track-info {
+  border: 1px solid black;
+  margin: 5px;
 }
