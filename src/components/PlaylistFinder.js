@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import SpotifyWebApi from 'spotify-web-api-js';
-import {EmailShareButton} from 'react-share';
+
 
 
 const PlaylistFinder = (props) => {
@@ -16,17 +16,21 @@ const PlaylistFinder = (props) => {
       console.log('playlist get', res.tracks.items)
       setTracks();
       setTracks(res.tracks.items);
+      document.getElementById('playlists').style.display='none'
     }, [])
   }
 
+
   const hideTracks = () => {
+    document.getElementById('playlists').style.display='block'
     setTracks();
   }
 
     return (<>
           <div className='playlist-header'>{props.user}</div>
+
             <div className='playlist-container'>
-              <div className='playlists'>
+              <div id='playlists' className='playlists'>
                   {props.playlists.map(list => {
                       return(
                         <div className='mapped-playlists' key={list.id}>
@@ -45,11 +49,15 @@ const PlaylistFinder = (props) => {
               {
                 tracks ? (
                   <div className='tracks'>
-                    <span onClick={hideTracks} className='collapse-tracks'>X</span>
+                    <div className='track-controls'>
+                      <div className='send-tracks'>Send Playlist</div>
+                      <div onClick={hideTracks} className='collapse-tracks'>X</div>
+                    </div>
+                    
                   {tracks.map(song => {
                       return(
                           <li className='track-info' key={song.added_at}>
-                            {song.track.name} | {song.track.artists[0].name}
+                            <span className='track-name'>{song.track.name}</span> | <span className='artist-name'>{song.track.artists[0].name}</span>
                           </li>
                       )
                   })}
