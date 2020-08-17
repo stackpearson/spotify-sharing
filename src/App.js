@@ -30,7 +30,9 @@ function App() {
     
     if (_token) {
       setToken(_token)
+      console.log('token', _token)
       spotify.setAccessToken(_token);
+      localStorage.setItem('auth-token', _token)
 
       spotify.getMe()
       .then((res) => setUser(res.display_name))
@@ -40,6 +42,7 @@ function App() {
         // console.log(res.items)
         setPlaylists(res.items)
       })
+      
   
     }
 

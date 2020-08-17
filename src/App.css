@@ -42,7 +42,42 @@ html {
   color: black;
 }
 
+.playlists {
+  width: 30%;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 5px;
+
+}
+
+.playlist-container {
+  margin-top: 25px;
+  display: flex;
+}
+
+.playlist-items {
+  list-style-type: none;
+  text-align: center;
+}
+
+.playlist-items:hover {
+  background-color: #1DB954;
+  border-radius: 15px;
+  color: white;
+  padding: 5px;
+}
+
+.song-emphasis {
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.tracks {
+  width: 70%;
+}
+
 .track-info {
   border: 1px solid black;
   margin: 5px;
+  display: inline-block;
 }
