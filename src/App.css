@@ -1,5 +1,29 @@
+.artist-name {
+  font-weight: 900;
+}
+
+.collapse-tracks {
+ color: black;
+}
+
+.collapse-tracks:hover {
+  color: white;
+  font-weight: 700;
+  background-color: black;
+  padding: 0px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+
 html {
   background-color: #282c34bd;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .login-link {
@@ -29,6 +53,31 @@ html {
   margin: 25px;
 }
 
+.mapped-playlists {
+  display: flex;
+}
+
+.playlist-image {
+  width: 100px;
+  height: 100px;
+  margin: 2px 2px 2px 10px;
+}
+
+.playlists {
+  max-width: 500px;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.playlist-container {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 35px;
+}
+
 .playlist-header {
   max-width: 300px;
   display: inline;
@@ -40,24 +89,15 @@ html {
 
 .playlist-header:hover {
   color: black;
-}
-
-.playlists {
-  width: 30%;
-  border: 3px solid black;
-  border-radius: 10px;
-  margin: 5px;
-
-}
-
-.playlist-container {
-  margin-top: 25px;
-  display: flex;
+  margin-bottom: 25px;
 }
 
 .playlist-items {
   list-style-type: none;
   text-align: center;
+  padding: 5px;
+  position: relative;
+  top: calc(50% - 15.75px);
 }
 
 .playlist-items:hover {
@@ -65,6 +105,19 @@ html {
   border-radius: 15px;
   color: white;
   padding: 5px;
+  cursor: pointer;
+}
+
+.send-tracks {
+  color: black;
+}
+
+.send-tracks:hover {
+  background-color: #1DB954;
+  border-radius: 15px;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .song-emphasis {
@@ -72,12 +125,24 @@ html {
   text-decoration: underline;
 }
 
+.track-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.track-name {
+  font-style: italic;
+}
+
 .tracks {
-  width: 70%;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 .track-info {
-  border: 1px solid black;
   margin: 5px;
-  display: inline-block;
+  list-style-type: none;
+  text-align: center;
 }
