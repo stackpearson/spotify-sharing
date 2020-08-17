@@ -1,6 +1,7 @@
 export const authEndpoint = 'https://accounts.spotify.com/authorize';
 
 const redirectUri = 'http://localhost:3000/';
+//need to update here & in spotify to deploy: https://spotify-playlist-sharing.netlify.app/
 const clientId = 'c1a6838f444249b69a78c89074c2e47e';
 // export const clientSecret = '89ba1ad2b279472fa33565b8394a748e';
 

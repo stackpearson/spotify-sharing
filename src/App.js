@@ -39,7 +39,7 @@ function App() {
 
       spotify.getUserPlaylists()
       .then((res) =>{
-        // console.log(res.items)
+        console.log('get playlists', res.items)
         setPlaylists(res.items)
       })
       
