@@ -30,6 +30,7 @@ html {
   color: black;
   font-size: 30px;
   font-weight: 700;
+  margin-top: 30px;
   border: 2px solid white;
   padding: 10px;
   background-color: white;
@@ -44,14 +45,17 @@ html {
 }
 
 .login-page {
-  display: grid;
-  place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.login-page img {
-  max-width: 830px;
-  margin: 25px;
+.login-page div {
+  margin: 10px;
 }
+
 
 .mapped-playlists {
   display: flex;
